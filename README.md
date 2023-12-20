@@ -13,17 +13,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * [ Build](#Build)
 * [ Running unit tests](#Running-unit-tests)
 
-# Project Image 
-
-<img src="src\assets\Frontend-Screenshots\1.PNG">
-<img src="src\assets\Frontend-Screenshots\2.PNG">
-<img src="src\assets\Frontend-Screenshots\3.PNG">
-<img src="src\assets\Frontend-Screenshots\4.PNG">
-<img src="src\assets\Frontend-Screenshots\5.PNG">
-<img src="src\assets\Frontend-Screenshots\6.PNG">
-<img src="src\assets\Frontend-Screenshots\7.PNG">
-<img src="src\assets\Frontend-Screenshots\8.PNG">
-
 ## Version Details
 
 *  Node: 14.15.1
@@ -55,10 +44,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
