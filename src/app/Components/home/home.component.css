@@ -14,6 +14,13 @@
     display: none;
 }
 
+.logo img{
+    width: 140px;
+}
+.admin{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(4, 0, 78) 0%, rgb(9, 9, 121) 25%, #a4008bfa 100%);
+}
 @media only screen and (max-width:720px){
     .nav-button{
         display: block;

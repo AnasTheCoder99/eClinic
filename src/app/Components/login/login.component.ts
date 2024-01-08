@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
 
       if(res) this.route.navigate(['home']); 
       else  {
-        let msg=" Username or Password is Wrong !!";
+        let msg="Username or password is wrong!";
         this.showAlert.showAlert(msg,"error",this.alertContainer);
       }
       

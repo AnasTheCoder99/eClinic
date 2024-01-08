@@ -1,5 +1,5 @@
 .alert-box{
-    position: absolute;
+    position: fixed;
     top:1;
     left: 40%;
     width: 20vw;
@@ -9,12 +9,13 @@
     padding: 20px 40px;
     font-size: 17px;
     box-shadow: 0 0 3px 2px #444343;
-    color: black;
+    color: white;
     border-radius: 5px;
     border-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .error{
-    background-color: red;
+    background-image: linear-gradient(#ff0000,#4a0000);
 }
 .success{
     background-color: yellowgreen

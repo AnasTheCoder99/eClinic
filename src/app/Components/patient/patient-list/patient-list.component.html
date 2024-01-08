@@ -1,4 +1,5 @@
-<div class="body" style="padding-top: 100px;">
+
+<div class="body" style="padding-top: 100px;">    
     <mat-table class="patient-table mat-elevation-z8" [dataSource]="dataSource">
         <ng-container matColumnDef="patientId">
             <mat-header-cell *matHeaderCellDef >PatientId</mat-header-cell>
@@ -15,8 +16,8 @@
         <ng-container matColumnDef="action">
             <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
             <mat-cell  *matCellDef="let patient">
-                <button style="background-color: green;" mat-button class="mat-raised-button mat-warn table-btn" (click)="editPatient(patient.patientId)">Edit</button>
-                <button style="background-color:cornflowerblue;" mat-button class="mat-raised-button mat-warn table-btn" >Receipt</button>
+                <button style="background-color: #ab478b;" mat-button class="mat-raised-button mat-warn table-btn" (click)="editPatient(patient.patientId)">Edit</button>
+                <button style="background-color:#0E54AE;" mat-button class="mat-raised-button mat-warn table-btn" >Receipt</button>
             </mat-cell>
         </ng-container>
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

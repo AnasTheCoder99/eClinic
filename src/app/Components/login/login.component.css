@@ -1,36 +1,754 @@
-.header{
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 40vh;
-    background-color: #390ead;
-    word-spacing: 1px;
-    color: #ffffff;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 10;
+    background-color: white;
 }
-.login-box{
-    margin: 20px 20px;
-    padding: 10px  20px;
-}
-.login-form{
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;   
-}
-.form-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-.card-title{
-    text-align: center;
-}
-.form-actions *{
-    margin: 10px 10px;
-}
-.form-actions button{
-    width: fit-content;
-}
-.form-actions a{
+.navbar .navbar-left-side a{
+    color: black;
     text-decoration: none;
+    font-family: 'Yantramanav', sans-serif;
 }
+.navbar .navbar-left-side img{
+    width: 140px;
+}
+.navbar .navbar-right-side > ul{
+    display: flex;
+    list-style: none;
+}
+.navbar .navbar-right-side > ul  li{
+    position: relative;
+    padding: 20px;
+    transition: 400ms;
+}
+.navbar .navbar-right-side > ul>  li:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.navbar .navbar-right-side >ul> li:hover .drop-down{
+    opacity: 1;
+    visibility: visible;
+}
+.drop-down{
+    visibility: hidden;
+    opacity: 0;
+    width: 190px;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+    transition: opacity 300ms;
+}
+.navbar .navbar-right-side a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/hero-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(10px); 
+    opacity: 0; 
+}
+
+.navbar-content {
+    z-index: 1; 
+}
+
+
+.login-page{
+    background: url("https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/hero-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 0 60px;
+    padding-top: 100px;
+}
+.header{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.header-content{
+    max-width: 600px;
+    padding-right: 60px;
+    margin-top: 50px;
+}  
+.header-content-section{
+    max-width: 600px;
+    padding: 0 60px;
+    margin-top: 50px;
+}  
+.header-paraghraph{
+    color: #0E54AE;
+    font-size: clamp(1rem, 0.7241rem + 1.3793vw, 1.5rem);
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+.main-header{
+    color: #bc74a5;
+    font-size: clamp(2.5rem, 1.8103rem + 3.4483vw, 3.75rem);
+    line-height: 70px;
+    font-weight: 700;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.full-protection{
+    display: flex;
+    align-items: center;
+}
+.full-protection-content{
+    width: 210px;
+    color: #0e54ae;
+}
+.full-protection-content h2{
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+}
+.full-protection-content p{
+    color: black;
+    line-height: 1;
+    opacity: 15;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.complete-service-content{
+    width: 200px;
+    color: #0e54ae;
+}
+.complete-service-content h2{
+    padding: 0;
+    margin: 0;
+    font-weight: 200;
+    
+}
+.complete-service-content p{
+    color: black;
+    line-height: 1;
+    opacity: 15;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.full-protection-img{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    fill: #0E54AE;
+}
+
+.login-box{
+    height: 630px;
+
+}
+
+form{
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 40px 35px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+form *{
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    color: black;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: #0056b3;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    
+}
+::placeholder{
+    color: black;
+}
+.login-form-btn{
+    margin-top: 10px;
+    width: 100%;
+    color: #080710;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    background-color: #0056b3;
+    background-image: linear-gradient(to right,#0056b351,#007bff 100%);
+    background-size: 200% 100% !important;
+    color: #ffffff;
+    box-shadow: 1px 1px 10px 1px rgba(34,34,34,.2);
+    text-shadow: 0 1px 2px rgba(34,34,34,.2);
+    border-radius: 4px;
+    transition: all 300ms ease-in-out;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white !important;
+}
+.login-form-btn:hover{
+    background-position: 99% 0;
+    transform: translateY(-3px);
+}
+.social{
+  margin-top: 20px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: black;;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+.show-pass-btn{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: 30px;
+}
+.password-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+#book-appointment{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding-top: 50px;
+    /* transform: translate(-50%,-50%);
+    top:25%;
+    left: 70%;
+    margin-bottom: 100px; */
+}
+
+.main-section {
+    background-color: rgba(14, 84, 174, 1);
+    padding: 50px;
+    width: 100%;
+    height: max-content;
+    z-index: 2;
+}
+
+.content {
+    background-color: rgba(14, 84, 174, 1);
+    padding: 30px;
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.content .blue-box::before{
+    content: '';
+    display: block;
+    width: 10em;
+    height: 2px;
+    background-color: #bc74a5;
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    margin-bottom: 20px;
+}
+.content .blue-box::after{
+    content: '';
+    display: block;
+    width: 10em;
+    height: 2px;
+    background-color: #bc74a5;
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    margin-top: 20px;
+}
+.content img{
+    width: 120px;
+}
+
+.blue-box {
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+    font-style: italic;
+}
+
+
+   .appointment-form {
+       transform: translate(-50%,-50%);
+       position: absolute;
+       left: 870px;
+       top: 180px;
+    background-color: rgba(255,255,255,0.13);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 20px 20px;
+    background-color: #fff !important;
+    }
+    .appointment-form form{
+        padding: 0 50px;
+        box-shadow: none;
+        width: max-content;
+        margin: 0;
+    }
+.form-elements{
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+   .appointment-form img{
+    width: 250px;
+    height: 250px;
+    margin: 0 40px;
+   }
+
+   .appointment-form h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+   }
+   
+   .appointment-form label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    margin: 0;
+   }
+   
+   .appointment-form input[type="email"],
+   .appointment-form select,
+   .appointment-form input[type="date"] {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+   }
+   
+   .appointment-form button[type="submit"] {
+    width: 200px;
+    padding: 10px;
+    background-color: #bc74a5;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   
+   .appointment-form button[type="submit"]:hover {
+    background-color: #0056b3;
+   }
+
+.white-box {
+    color: #007BFF;
+
+}
+   
+.service-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 350px;
+}
+.services2 {
+    border: 1px solid  white;
+    width: 240px;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    height: 100%;
+    margin: 20px 10px ;
+    background-color: #bc74a5;
+}
+.services2 img{
+    max-width: 100%;
+}
+.service-content{
+    background-color: #bc74a5;
+    color: white;
+    padding: 30px 30px;
+    position: relative;
+}
+.service-content svg{
+    position: absolute;
+    transform: translate(-50%,-70%);
+    top: 0;
+    left: 26%;
+    background-color: white;
+    padding: 10px;
+}
+   .iii {
+
+   }
+
+   .aa {
+    margin-bottom: -250px;
+    
+   }
+   
+   h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+   }
+
+   .second-image {
+    background: url('https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/background-3.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.second-image .main-section {
+    background-color: white;
+    padding: 50px;
+    max-width: 580px;
+    height: max-content;
+    z-index: 2;
+    
+}
+.second-image  .content {
+    background-color: transparent;
+    padding: 30px;
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 12%;
+}
+.second-image  .blue-box {
+
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    font-style: italic;
+}
+
+@media screen and (max-width: 1500px) {
+    .appointment-form {
+        transform: translate(-50%,-50%);
+        left: 870px;
+        top: 180px;
+     }
+     #book-appointment{
+        display: flex;
+        position: relative;
+    }
+  }
+@media screen and (max-width: 1300px) {
+    .appointment-form {
+        transform: translate(-50%,-50%);
+        left: 870px;
+        top: 180px;
+     }
+     #book-appointment{
+        display: flex;
+        position: relative;
+    }
+  }
+@media screen and (max-width: 1200px) {
+    .appointment-form {
+        transform: translate(-50%,-50%);
+        left: 870px;
+        top: 180px;
+     }
+     #book-appointment{
+        display: flex;
+        position: relative;
+    }
+  }
+  
+
+
+
+  
+
+.kilimanjaro_area {
+    position: relative;
+    z-index: 1;
+	}
+	.foo_top_header_one {
+    background-color: #0056b3;
+    color: #fff;
+}
+.section_padding_100_70 {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.foo_top_header_one {
+    color: #fff;
+}
+.kilimanjaro_part {
+    margin-bottom: 30px;
+}
+.foo_top_header_one .kilimanjaro_part > h5 {
+    color: #fff;
+}
+.kilimanjaro_part h4, .kilimanjaro_part h5 {
+    margin-bottom: 30px;
+}
+.kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
+    color: #fff;
+}
+p, ul li, ol li {
+    font-weight: 300;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+.kilimanjaro_bottom_header_one {
+    background-color: #0056b3;
+}
+.section_padding_50 {
+    padding: 15px 0;
+}
+.kilimanjaro_bottom_header_one p {
+    color: #fff;
+    margin: 0;
+}
+p, ul li, ol li {
+    font-weight: 300;
+}
+.kilimanjaro_bottom_header_one a {
+    color: inherit;
+    font-size: 14px;
+}
+a, h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.kilimanjaro_widget > li {
+    display: inline-block;
+}
+p, ul li, ol li {
+    font-weight: 300;
+}
+ol li, ul li {
+    list-style: outside none none;
+}
+.kilimanjaro_widget a {
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 4px;
+    padding: 7px 12px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+.kilimanjaro_links a {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+.kilimanjaro_links a {
+    color: #fff;
+    font-size: 13px;
+}
+top-15 {
+    margin-top: 15px;
+}
+.foo_top_header_one .kilimanjaro_part > h5 {
+    color: #fff;
+}
+.kilimanjaro_part h4, .kilimanjaro_part h5 {
+    margin-bottom: 30px;
+}
+.kilimanjaro_social_links > li {
+    /* display: inline-block; */
+}
+p, ul li, ol li {
+    font-weight: 300;
+}
+.kilimanjaro_social_links a {
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 3px;
+    padding: 7px 12px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.kilimanjaro_blog_area .kilimanjaro_date {
+    color: #27ae60;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.kilimanjaro_blog_area > p {
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+.kilimanjaro_works > a {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 33.33333333%;
+    z-index: 1;
+}
+.kilimanjaro_thumb {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 75px;
+}
+.kilimanjaro_links a i {
+    padding-right: 10px;
+}
+  /* :: 18.0 Footer Area CSS */
+
+    .footer_area {
+        position: relative;
+        z-index: 1;
+    }
+ .footer_bottom p > i,
+    .footer_bottom p > a:hover {
+        color: #27ae60;
+    }	
+
+    .social_links_area {
+        border-bottom: 1px solid #fff;
+        padding: 50px 0 30px 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+ .social_links_area > a:hover {
+        color: #27ae60;
+    }
+
+    .inline-style .social_links_area > a:hover {
+        background-color: transparent;
+        color: #27ae60;
+        border: 0px solid transparent;
+    }
+ .single_feature:hover .feature_text h4 {
+        color: #27ae60;
+    }
+.kilimanjaro_blog_area {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 15px;
+    padding: 0 0 15px 90px;
+    position: relative;
+    z-index: 1;
+}
+.kilimanjaro_links a {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+
+/* Credit to https://bootsnipp.com/snippets/X2XOv */

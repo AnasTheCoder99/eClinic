@@ -1,42 +1,357 @@
 <ng-template #placeholder></ng-template>
-<div>
-    <div class="header">
-        <h1>{{title | uppercase}}</h1>
-        <p>Home  |  {{title}}</p>
+
+<div class ="navbar">
+    <div class="navbar-left-side">
+        <a href=”#” class=”nav-logo”><img src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2019/12/denticare-logo.png" alt=""></a>
     </div>
-    <div class="login-box">
-        <form class="login-form" (ngSubmit)="onSubmit()" #f="ngForm">
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title class="card-title">Login</mat-card-title>
-                </mat-card-header>
-                <mat-card-content class="form-content">
-                    <mat-form-field>
-                        <mat-label>Username</mat-label>
-                        <input matInput type="text" ngModel 
-                                name="username"
-                                required pattern="[a-zA-Z0-9]+"
-                                #username="ngModel">
-                        <mat-error *ngIf="username.errors?.required">username is required</mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Password</mat-label>
-                        <input matInput [type]=" hide ? 'password' : 'text' "
-                                ngModel name="password"
-                                required
-                                #password="ngModel">
-                        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" >
-                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        </button>
-                        <mat-error *ngIf="password.errors?.required">password is required</mat-error>
-                    </mat-form-field>
-                </mat-card-content>
-                <mat-card-actions class="form-content form-actions"> 
-                    <mat-checkbox>Remember me</mat-checkbox>
-                    <button mat-stroked-button type="submit">Login</button>
-                    <a href="#">forgot your Password ?</a>
-                </mat-card-actions>
-            </mat-card>
-        </form>       
+
+    <div class="navbar-right-side">
+        <ul>
+           <li> 
+            <a href="#home">About</a>
+            <ul class="drop-down">
+                <li><a href="#home">General Info</a></li>
+                <li><a href="#home">Team</a></li>
+                <li><a href="#home">Doctor`s profile</a></li>
+                <li><a href="#home">Clients</a></li>
+                <li><a href="#home">Careers</a></li>
+                <li><a href="#home">Location</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#home">Services</a>
+            <ul class="drop-down">
+                <li><a href="#home">Single Service</a></li>
+                <li><a href="#home">Solutions</a></li>
+                <li><a href="#home">FAQ</a></li>
+                <li><a href="#home">Working Hours</a></li>
+                <li><a href="#home">Book Appointments</a></li>
+            </ul>
+        </li>
+        <li><a href="#home">Pages</a>
+            <ul class="drop-down">
+                <li><a href="#home">Process</a></li>
+                <li><a href="#home">Company History</a></li>
+                <li><a href="#home">Pricing</a></li>
+                <li><a href="#home">404</a></li>
+            </ul>
+        </li>
+        <li><a href="#home">Portfolio</a>
+            <ul class="drop-down">
+                <li><a href="#home">Portfolio-list</a></li>
+                <li><a href="#home">Portfolio-grid</a></li>
+                <li><a href="#home">Portfolio-tiles</a></li>
+                <li><a href="#home">Single portfolio case</a></li>
+            </ul>
+        </li>
+        <li><a href="#home">News</a>
+            <ul class="drop-down">
+                <li><a href="#home">News-list</a></li>
+                <li><a href="#home">News-grid</a></li>
+                <li><a href="#home">News-tiles</a></li>
+                <li><a href="#home">Latest posts</a></li>
+                <li><a href="#home">Single post</a></li>
+            </ul>
+        </li>
+        <li><a href="#home">Contact</a>
+            <ul class="drop-down">
+                <li><a href="#home">Whatsapp</a></li>
+                <li><a href="#home">Instagram</a></li>
+                <li><a href="#home">Facebook</a></li>
+                <li><a href="#home">Twitter</a></li>
+                <li><a href="#home">Phone</a></li>
+            </ul>
+        </li>
+        </ul>
     </div>
 </div>
+<div class="login-page">
+    <div class="header">
+    
+ 
+
+        <!-- <h1>{{title | uppercase}}</h1>
+        <p>Home  |  {{title}}</p> -->
+        
+        <div class="header-content">
+            <p class="header-paraghraph">Commited to Excellence</p>
+        <h1 class="main-header">Personalized & Comfortable</h1>
+        </div>
+        <div class="services">
+            <div class="full-protection">
+                <div class="full-protection-img">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#0e54ae"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:none;stroke:#0e54ae;stroke-miterlimit:10;stroke-width:0.9600000000000002;}</style> </defs> <g id="dental"> <path class="cls-1" d="M1.5,8.18A6.68,6.68,0,0,1,12,2.7"></path> <path class="cls-1" d="M22.5,8.18A6.69,6.69,0,0,0,9.78,5.31"></path> <path class="cls-1" d="M22.5,8.18V9.6a17.35,17.35,0,0,1-1.32,6.63,17.27,17.27,0,0,1-3.75,5.61,2.25,2.25,0,0,1-3.82-1.25L13,16.54a1,1,0,0,0-2,0l-.62,4.05a2.25,2.25,0,0,1-3.82,1.25A17.27,17.27,0,0,1,1.5,9.6V8.18"></path> <line class="cls-1" x1="12" y1="8.18" x2="19.64" y2="8.18"></line> <line class="cls-1" x1="15.82" y1="4.36" x2="15.82" y2="12"></line> </g> </g></svg>
+                </div>
+                <div class="full-protection-content">
+                    <h2>Full Protection</h2>
+                    <p>
+                        Competently parallel task researched data and process improvements
+                    </p>
+                </div>
+            </div>
+            <div class="full-protection">
+                <div class="full-protection-img">
+                <svg height="60px" width="60px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60.97 60.97" xml:space="preserve" fill="#0E54AE" stroke="#0E54AE" stroke-width="0.0006096900000000001" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#0E54AE;" d="M5.193,12.367l1.668-0.362c1.918-0.416,3.141-2.314,2.726-4.233l-0.878-4.05 C8.355,2.096,6.89,0.917,5.226,0.917c-0.252,0-0.505,0.027-0.752,0.081L2.806,1.359C1.879,1.56,1.085,2.111,0.57,2.913 C0.054,3.714-0.12,4.666,0.082,5.592l0.878,4.05c0.353,1.626,1.816,2.806,3.481,2.806C4.693,12.448,4.946,12.421,5.193,12.367z M2.915,9.219L2.037,5.168C1.949,4.764,2.025,4.347,2.252,3.995S2.826,3.401,3.23,3.314l1.668-0.362 c0.108-0.023,0.219-0.035,0.328-0.035c0.73,0,1.373,0.517,1.527,1.229l0.878,4.049c0.182,0.841-0.354,1.673-1.194,1.856 l-1.668,0.362C3.938,10.593,3.092,10.038,2.915,9.219z M59.927,43.216L44.191,27.512c-1.181-1.178-3.411-2.1-5.078-2.1l-3.429,0.001 v-3.441c1.963,0,3.561-1.436,3.561-3.2s-1.598-3.2-3.561-3.2H25.649c-1.963,0-3.56,1.436-3.56,3.2s1.597,3.2,3.56,3.2v3.444 l-0.578,0c-1.144,0-2.854-0.709-3.663-1.517l-9.923-9.922c-1.34-1.341-3.694-1.339-5.034,0l-1.207,1.207 c-0.67,0.67-1.039,1.564-1.039,2.517c0,0.953,0.369,1.847,1.04,2.517l11.936,11.92c1.181,1.179,3.411,2.102,5.078,2.102h7.408v8.133 h-4.12c-0.553,0-1,0.448-1,1v4.12h-2.2c-1.963,0-3.56,1.597-3.56,3.56v5.44c0,1.963,1.597,3.56,3.56,3.56h20.48 c1.963,0,3.561-1.597,3.561-3.56v-5.44c0-1.963-1.598-3.56-3.561-3.56h-2.199v-4.12c0-0.552-0.447-1-1-1h-4.12v-8.133h0.817 c1.143,0,2.854,0.709,3.663,1.517l13.701,13.701c0.67,0.67,1.563,1.04,2.518,1.04c0.953,0,1.847-0.369,2.517-1.04l1.207-1.207 c0.671-0.671,1.039-1.564,1.039-2.517C60.969,44.78,60.599,43.886,59.927,43.216z M24.089,18.772c0-0.65,0.714-1.2,1.56-1.2h10.035 c0.846,0,1.561,0.55,1.561,1.2s-0.715,1.2-1.561,1.2H25.649C24.803,19.972,24.089,19.422,24.089,18.772z M27.649,21.972h6.035v3.442 l-6.035,0.002V21.972z M44.387,51.052v5.44c0,0.86-0.7,1.56-1.561,1.56h-20.48c-0.86,0-1.56-0.7-1.56-1.56v-5.44 c0-0.86,0.699-1.56,1.56-1.56h3.2h14.081h3.199C43.687,49.492,44.387,50.192,44.387,51.052z M38.627,47.492H26.546v-3.12h4.12h3.841 h4.12V47.492z M33.507,42.372h-1.841v-8.133h1.841V42.372z M36.325,32.239h-1.817h-3.841h-8.408c-1.143,0-2.855-0.709-3.664-1.517 L6.659,18.802C6.366,18.51,6.205,18.119,6.205,17.7c0-0.418,0.161-0.81,0.453-1.103l1.207-1.207 c0.293-0.292,0.685-0.454,1.104-0.454c0.418,0,0.81,0.161,1.103,0.454l9.923,9.922c1.179,1.179,3.409,2.103,5.077,2.103l0.578,0 v2.249c0,0.552,0.447,1,1,1s1-0.448,1-1v-2.25l6.035-0.002v2.251c0,0.552,0.447,1,1,1s1-0.448,1-1v-2.252l3.429-0.001 c1.144,0,2.856,0.708,3.666,1.516l12.931,12.904l-3.276,3.541L41.402,34.341C40.222,33.163,37.992,32.239,36.325,32.239z M58.516,46.836l-1.207,1.207c-0.586,0.586-1.62,0.584-2.206,0l-1.254-1.254l3.277-3.542l1.389,1.386 c0.293,0.292,0.454,0.683,0.454,1.102C58.969,46.152,58.808,46.543,58.516,46.836z"></path> </g></svg>
+
+                </div>
+                
+                <div class="complete-service-content">
+                    <h2>Complete Service</h2>
+                    <p>
+                        Collaboratively expedite quality products via client focused results
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="login-box">
+
+
+        <form class="login-form" (ngSubmit)="onSubmit()" #f="ngForm">
+            <h3>Login Here</h3>
+    
+            <label for="username">Username</label>
+            
+            <input 
+            matInput type="text" 
+            ngModel 
+            name="username"
+            required pattern="[a-zA-Z0-9]+"
+            #username="ngModel"
+            placeholder="Email or Phone"
+            id="username"
+            >
+            <mat-error *ngIf="username.errors?.required">username is required</mat-error>
+
+            <label for="password">Password</label>
+
+            <div>
+            <div class="password-input">
+                <input 
+            matInput [type]=" hide ? 'password' : 'text' "
+            ngModel name="password"
+            required
+            #password="ngModel"
+            placeholder="Password"
+            id="password"
+            >
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide" class="show-pass-btn" >
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            </div>
+            <mat-error *ngIf="password.errors?.required">password is required</mat-error>
+        </div>
+            <br>
+            <mat-card-actions class="form-content form-actions"> 
+                <mat-checkbox>Remember me</mat-checkbox>
+                <button mat-stroked-button type="submit" class="login-form-btn">Login</button>
+                <a href="#">forgot your Password ?</a>
+            </mat-card-actions>
+
+            <div class="social">
+              <div class="go"><i class="fab fa-google"></i>  Google</div>
+              <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+            </div>
+        </form>
+             
+
+    </div>
+</div> 
+
+<section id="book-appointment">
+    <div class="main-section">
+        <div class="content">
+            <p class="blue-box">"My family trusts Dr Fischer completely, he's been with us for years and as helped us on numerous occasions"</p>
+            <img src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/03/signature.png" alt="">
+        </div>
+    </div>
+    
+</section>
+
+
+   <div class="header-content-section">
+       <p class="header-paraghraph">Commited to</p>
+   <h1 class="main-header">Excellence</h1>
+   </div>
+
+   <div class="service-card">
+    <div class="services2">
+        <img src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/home-services.jpg" alt="">
+        <div class="service-content">
+            <svg height="60px" width="60px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60.97 60.97" xml:space="preserve" fill="#0E54AE" stroke="#0E54AE" stroke-width="0.0006096900000000001" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path style="fill:#0E54AE;" d="M5.193,12.367l1.668-0.362c1.918-0.416,3.141-2.314,2.726-4.233l-0.878-4.05 C8.355,2.096,6.89,0.917,5.226,0.917c-0.252,0-0.505,0.027-0.752,0.081L2.806,1.359C1.879,1.56,1.085,2.111,0.57,2.913 C0.054,3.714-0.12,4.666,0.082,5.592l0.878,4.05c0.353,1.626,1.816,2.806,3.481,2.806C4.693,12.448,4.946,12.421,5.193,12.367z M2.915,9.219L2.037,5.168C1.949,4.764,2.025,4.347,2.252,3.995S2.826,3.401,3.23,3.314l1.668-0.362 c0.108-0.023,0.219-0.035,0.328-0.035c0.73,0,1.373,0.517,1.527,1.229l0.878,4.049c0.182,0.841-0.354,1.673-1.194,1.856 l-1.668,0.362C3.938,10.593,3.092,10.038,2.915,9.219z M59.927,43.216L44.191,27.512c-1.181-1.178-3.411-2.1-5.078-2.1l-3.429,0.001 v-3.441c1.963,0,3.561-1.436,3.561-3.2s-1.598-3.2-3.561-3.2H25.649c-1.963,0-3.56,1.436-3.56,3.2s1.597,3.2,3.56,3.2v3.444 l-0.578,0c-1.144,0-2.854-0.709-3.663-1.517l-9.923-9.922c-1.34-1.341-3.694-1.339-5.034,0l-1.207,1.207 c-0.67,0.67-1.039,1.564-1.039,2.517c0,0.953,0.369,1.847,1.04,2.517l11.936,11.92c1.181,1.179,3.411,2.102,5.078,2.102h7.408v8.133 h-4.12c-0.553,0-1,0.448-1,1v4.12h-2.2c-1.963,0-3.56,1.597-3.56,3.56v5.44c0,1.963,1.597,3.56,3.56,3.56h20.48 c1.963,0,3.561-1.597,3.561-3.56v-5.44c0-1.963-1.598-3.56-3.561-3.56h-2.199v-4.12c0-0.552-0.447-1-1-1h-4.12v-8.133h0.817 c1.143,0,2.854,0.709,3.663,1.517l13.701,13.701c0.67,0.67,1.563,1.04,2.518,1.04c0.953,0,1.847-0.369,2.517-1.04l1.207-1.207 c0.671-0.671,1.039-1.564,1.039-2.517C60.969,44.78,60.599,43.886,59.927,43.216z M24.089,18.772c0-0.65,0.714-1.2,1.56-1.2h10.035 c0.846,0,1.561,0.55,1.561,1.2s-0.715,1.2-1.561,1.2H25.649C24.803,19.972,24.089,19.422,24.089,18.772z M27.649,21.972h6.035v3.442 l-6.035,0.002V21.972z M44.387,51.052v5.44c0,0.86-0.7,1.56-1.561,1.56h-20.48c-0.86,0-1.56-0.7-1.56-1.56v-5.44 c0-0.86,0.699-1.56,1.56-1.56h3.2h14.081h3.199C43.687,49.492,44.387,50.192,44.387,51.052z M38.627,47.492H26.546v-3.12h4.12h3.841 h4.12V47.492z M33.507,42.372h-1.841v-8.133h1.841V42.372z M36.325,32.239h-1.817h-3.841h-8.408c-1.143,0-2.855-0.709-3.664-1.517 L6.659,18.802C6.366,18.51,6.205,18.119,6.205,17.7c0-0.418,0.161-0.81,0.453-1.103l1.207-1.207 c0.293-0.292,0.685-0.454,1.104-0.454c0.418,0,0.81,0.161,1.103,0.454l9.923,9.922c1.179,1.179,3.409,2.103,5.077,2.103l0.578,0 v2.249c0,0.552,0.447,1,1,1s1-0.448,1-1v-2.25l6.035-0.002v2.251c0,0.552,0.447,1,1,1s1-0.448,1-1v-2.252l3.429-0.001 c1.144,0,2.856,0.708,3.666,1.516l12.931,12.904l-3.276,3.541L41.402,34.341C40.222,33.163,37.992,32.239,36.325,32.239z M58.516,46.836l-1.207,1.207c-0.586,0.586-1.62,0.584-2.206,0l-1.254-1.254l3.277-3.542l1.389,1.386 c0.293,0.292,0.454,0.683,0.454,1.102C58.969,46.152,58.808,46.543,58.516,46.836z">
+                
+            </path> </g></svg>
+            <h2 class="iii">Dental Services</h2>
+        <p class="aa">Globally harness multimedia based collaboration and idea haring with backend</p>
+        </div>
+       </div>
+       <div class="services2">
+        <img src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/home-services-2.jpg" alt="">
+        <div class="service-content">
+            <svg height="60px" width="60px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#0E54AE;} </style> <g> <path class="st0" d="M426.583,71.209c-7.871-18.787-20.457-35.787-38.119-48.446c-23.655-17.09-47.544-22.852-68.09-22.762 C304.24,0.01,290.161,3.261,278.869,6.2c-5.628,1.475-10.577,2.859-14.579,3.806c-3.966,0.955-7.003,1.358-8.29,1.339 c-1.286,0.018-4.323-0.384-8.308-1.339c-12.131-2.752-31.954-9.952-56.066-10.006c-20.547-0.09-44.444,5.663-68.09,22.762 c-17.671,12.658-30.249,29.659-38.128,48.455c-7.906,18.813-11.31,39.422-11.31,60.3c0.134,48.257,17.777,98.374,45.972,134.769 c20.725,26.604,48.294,40.432,73.405,47.418c25.165,7.013,48.446,7.576,62.524,7.584c14.079-0.009,37.35-0.572,62.516-7.584 c25.121-6.986,52.689-20.815,73.414-47.418c28.194-36.386,45.829-86.512,45.972-134.769 C437.892,110.641,434.488,90.032,426.583,71.209z M366.238,246.277c-15.383,19.724-35.841,30.266-56.476,36.055 c-20.583,5.77-40.79,6.405-53.762,6.396c-12.989,0.009-33.187-0.626-53.761-6.396c-20.636-5.789-41.094-16.331-56.495-36.055 c-23.379-29.784-39.226-74.701-39.092-114.758c0-17.34,2.876-33.68,8.772-47.669c5.914-14.016,14.67-25.674,27.104-34.625 c18.404-13.114,34.18-16.563,49.098-16.661c11.686,0,22.816,2.403,33.277,5.154c5.244,1.359,10.292,2.797,15.33,3.985 c5.065,1.161,10.077,2.171,15.767,2.198c5.682-0.027,10.703-1.037,15.759-2.198c14.955-3.627,31.016-9.183,48.615-9.138 c14.91,0.098,30.686,3.564,49.098,16.661c12.426,8.951,21.172,20.609,27.104,34.625c5.887,13.972,8.773,30.329,8.754,47.669 C405.474,171.576,389.626,216.492,366.238,246.277z"></path> <polygon class="st0" points="199.058,336.54 185.498,336.54 199.058,373.202 314.317,373.202 327.878,336.54 314.317,336.54 "></polygon> <polygon class="st0" points="218.48,512 296.057,512 305.187,487.326 209.35,487.326 "></polygon> <polygon class="st0" points="203.963,388.014 191.554,404.772 203.963,421.541 309.404,421.541 321.812,404.772 309.404,388.014 "></polygon> <polygon class="st0" points="203.963,437.942 191.554,454.693 203.963,471.452 309.404,471.452 321.812,454.693 309.404,437.942 ">
+    
+</polygon> </g> </g></svg>
+            <h2 class="iii">Dental Implants</h2>
+        <p class="aa">Dramatically disseminate standardized metrics after resource-leveling processes.</p>
+        </div>
+       </div>
+       <div class="services2">
+        <img src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/home-services-3.jpg" alt="">
+        <div class="service-content">
+<svg height="60px" width="60px" fill="#0E54AE" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 163.862 163.861" xml:space="preserve" stroke="#0E54AE"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M155.357,51.376c-2.813-12.16-11.046-21.093-23.797-25.818c-7.532-2.782-24.563-5.291-34.708,1.583 c-0.292-0.718-0.597-1.443-1.108-2.082L80.619,6.584c-2.521-3.13-7.515-3.653-10.65-1.102L55.178,17.562L43.094,2.772 c-1.285-1.559-3.099-2.533-5.112-2.734c-2.009-0.201-3.998,0.402-5.532,1.693L13.951,16.844c-1.559,1.279-2.539,3.087-2.743,5.097 c-0.207,2.009,0.387,3.988,1.663,5.553l12.096,14.784l-14.8,12.093c-1.559,1.273-2.521,3.087-2.734,5.103 c-0.192,2.016,0.402,3.982,1.693,5.535l15.113,18.505c1.422,1.729,3.504,2.728,5.742,2.758c1.607,2.813,3.461,5.383,5.504,7.624 c7.066,7.77,9.113,12.264,10.263,17.391c0.262,1.193,0.844,4.512,0.88,5.2c1.796,42.916,16.48,46.667,20.021,46.947 c1.035,0.286,2.034,0.427,3.02,0.427c1.793,0,3.504-0.481,5.063-1.432c7.295-4.494,9.533-18.371,11.518-30.61 c0.707-4.408,1.389-8.573,2.162-10.991c1.284-3.981,2.351-5.017,2.351-5.212c0.943,0.512,2.509,3.508,2.703,4.707 c0.268,1.851,0.463,4.25,0.676,6.941c1.127,13.816,2.808,34.647,17.549,36.151c1.042,0.238,3.544,0.451,6.625-1.412 c6.942-4.214,12.075-16.24,15.241-35.762l0.476-3.111c1.15-7.807,2.722-18.499,9.158-25.265 C150.62,90.066,159.643,69.869,155.357,51.376z M17.69,23.555c-0.298-0.378-0.311-0.762-0.286-0.962 c0.018-0.207,0.119-0.597,0.481-0.914l18.52-15.125c0.372-0.305,0.764-0.323,0.965-0.292c0.207,0.018,0.6,0.11,0.892,0.469 l12.084,14.796L29.789,38.32L17.69,23.555z M13.939,61.07c-0.308-0.377-0.32-0.767-0.295-0.968 c0.012-0.207,0.107-0.597,0.463-0.895l59.795-48.884c0.308-0.244,0.624-0.304,0.844-0.304c0.398,0,0.779,0.17,1.035,0.499 L90.909,29.01c0.317,0.377,0.323,0.78,0.299,0.98s-0.109,0.59-0.476,0.895L30.94,79.77c-0.84,0.7-1.477,0.292-1.875-0.183 L13.939,61.07z M75.05,51.753L87.158,66.55c0.28,0.335,0.305,0.7,0.28,0.944c-0.024,0.201-0.109,0.608-0.487,0.907L68.452,83.526 c-0.566,0.45-1.422,0.384-1.87-0.177L54.499,68.547L75.05,51.753z M138.66,93.58c-7.806,8.201-9.608,20.514-10.796,28.668 l-0.456,3.008c-3.636,22.335-9.019,29.111-11.904,31.164c-1.486,1.053-2.436,0.92-2.326,0.962c-0.22-0.079-0.463-0.128-0.694-0.14 c-9.73-0.841-11.168-18.664-12.117-30.465c-0.231-2.85-0.433-5.383-0.725-7.337c-0.299-2.083-3.021-9.597-8.306-10.041 c-5.852-0.621-8.057,7.052-8.854,9.536c-0.91,2.867-1.596,7.051-2.375,11.892c-1.498,9.28-3.766,23.297-8.638,26.306 c-0.648,0.389-1.632,0.791-3.346,0.243c-0.244-0.085-0.648-0.134-0.904-0.146c-0.131-0.006-12.69-1.212-14.374-41.022 c-0.067-1.376-0.786-5.219-1.011-6.26c-1.589-7.094-4.768-12.574-11.74-20.24c-1.577-1.711-2.993-3.715-4.29-5.857l13.88-11.345 l12.083,14.81c1.483,1.82,3.666,2.752,5.849,2.752c1.69,0,3.374-0.555,4.783-1.693l18.508-15.125 c1.571-1.291,2.546-3.111,2.74-5.133c0.188-2.004-0.401-3.964-1.687-5.511L79.87,47.82l13.694-11.198 c1.321,0.456,2.813,0.042,3.604-1.188c5.834-8.957,24.149-6.99,32.212-4.007c10.845,4.019,17.537,11.204,19.894,21.367 C152.897,68.334,145.431,86.474,138.66,93.58z"></path> </g> </g></svg>
+            <h2 class="iii">Surgery</h2>
+        <p class="aa">Globally harness multimedia based collaboration and idea haring with backend</p>
+        </div>
+       </div>
+       <div class="services2">
+        <img src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/home-services-4.jpg" alt="">
+        <div class="service-content">
+            <svg height="60px" width="60px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#0E54AE" stroke="#0E54AE"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#0E54AE;} </style> <g> <path class="st0" d="M386.504,156.575c-19.34-15.092-38.896-20.3-56.195-20.19c-13.232,0.017-25.064,2.706-35.536,5.081 c-10.48,2.436-19.632,4.481-27.221,4.448c-7.575,0.034-16.723-2.012-27.207-4.448c-10.472-2.376-22.304-5.064-35.532-5.081 c-17.303-0.11-36.86,5.09-56.199,20.198c-14.36,11.067-24.785,25.576-31.35,42.148c-6.591,16.588-9.483,35.188-9.491,55.193 c0.016,30.64,6.764,64.722,18.486,100.909c12.104,37.336,22.477,64.789,30.15,84.751c3.826,9.968,6.975,18.068,9.284,24.468 c2.312,6.358,3.75,11.11,4.228,13.756c1.886,10.23,6.612,18.93,13.354,24.966c6.718,6.037,15.329,9.241,23.94,9.225 c8.895,0.008,17.747-3.365,24.815-9.58c7.098-6.214,12.362-15.185,14.898-26.041c0.74-3.187,1.21-6.536,1.679-10.306 c0.802-6.561,1.513-14.323,2.528-22.304c1.484-11.93,3.86-24.409,7.398-32.45c1.712-4.034,3.669-6.781,5.132-8.049 c1.544-1.268,2.08-1.471,3.889-1.573c1.421,0.042,1.987,0.254,2.943,0.828c1.603,0.931,4.35,4.254,6.59,9.968 c3.45,8.464,5.682,21.095,7.111,32.983c0.736,5.952,1.311,11.752,1.886,16.96c0.604,5.25,1.15,9.782,2.109,13.942 c2.541,10.856,7.788,19.827,14.89,26.041c7.068,6.232,15.933,9.588,24.824,9.58c8.611,0.016,17.222-3.188,23.94-9.233 c6.747-6.028,11.46-14.728,13.355-24.958c0.481-2.647,1.918-7.398,4.227-13.756c6.954-19.294,21.298-53.274,39.433-109.219 c11.727-36.179,18.47-70.269,18.478-100.909c0-19.996-2.892-38.605-9.482-55.193C411.281,182.159,400.856,167.643,386.504,156.575z M384.598,346.97c-11.925,36.77-22.08,63.648-29.698,83.475c-3.813,9.925-6.984,18.076-9.465,24.941 c-2.474,6.899-4.292,12.437-5.298,17.722c-1.065,5.546-3.191,8.742-5.318,10.661c-2.156,1.919-4.456,2.698-6.916,2.732 c-2.541-0.018-5.302-0.905-8.003-3.247c-2.672-2.359-5.351-6.291-6.878-12.716c-0.342-1.437-0.786-4.194-1.197-7.567 c-0.727-5.952-1.458-13.908-2.54-22.43c-1.687-12.852-3.996-26.972-9.271-39.332c-2.693-6.172-6.181-12.091-11.528-16.927 c-5.259-4.844-12.886-8.184-20.935-8.083c-6.092-0.034-12.052,1.81-16.791,4.913c-8.357,5.53-13.012,13.604-16.394,21.873 c-4.98,12.513-7.165,26.674-8.754,39.374c-0.786,6.333-1.37,12.268-1.927,17.24c-0.546,4.938-1.12,9.03-1.59,10.941 c-1.522,6.426-4.207,10.348-6.879,12.699c-2.713,2.359-5.461,3.246-8.002,3.246c-2.468-0.016-4.76-0.811-6.916-2.714 c-2.126-1.919-4.253-5.115-5.318-10.652c-1.006-5.294-2.824-10.831-5.297-17.73c-7.407-20.495-21.26-53.206-39.163-108.416 c-11.174-34.42-17.256-66.194-17.236-93.046c-0.012-17.544,2.566-32.94,7.682-45.767c5.136-12.842,12.657-23.192,23.242-31.392 c15.481-11.837,27.948-14.762,40.605-14.872c9.664-0.009,19.514,2.054,29.841,4.439c10.328,2.333,21.108,5.039,32.898,5.081 c11.796-0.042,22.575-2.748,32.902-5.081c10.336-2.384,20.186-4.448,29.854-4.439c12.644,0.11,25.107,3.044,40.6,14.872 c10.586,8.2,18.106,18.541,23.243,31.392c5.115,12.826,7.685,28.222,7.685,45.767C401.855,280.785,395.771,312.567,384.598,346.97z "></path> <path class="st0" d="M461.165,59.632l-43.593-11.55c-1.141-0.254-2.072-1.167-2.317-2.317L403.757,2.173 C403.452,0.905,402.328,0,401.018,0c-1.311,0-2.436,0.905-2.74,2.173l-11.49,43.592c-0.262,1.15-1.184,2.063-2.325,2.317 l-43.593,11.55c-1.276,0.254-2.181,1.386-2.181,2.697c0,1.311,0.905,2.443,2.181,2.688l43.593,11.558 c1.141,0.237,2.062,1.167,2.325,2.317l11.49,43.585c0.304,1.276,1.429,2.181,2.74,2.181c1.31,0,2.434-0.905,2.739-2.181 l11.498-43.585c0.245-1.15,1.176-2.08,2.317-2.317l43.593-11.558c1.277-0.245,2.182-1.378,2.182-2.688 C463.346,61.018,462.442,59.886,461.165,59.632z"></path> <path class="st0" d="M268.72,255.75l-39.809-10.551c-1.044-0.228-1.89-1.066-2.114-2.114l-10.501-39.805 c-0.279-1.158-1.306-1.987-2.502-1.987c-1.197,0-2.224,0.829-2.503,1.987l-10.492,39.805c-0.236,1.048-1.078,1.886-2.122,2.114 l-39.81,10.551c-1.166,0.229-1.99,1.268-1.99,2.461c0,1.201,0.824,2.232,1.99,2.46l39.81,10.551 c1.044,0.22,1.886,1.066,2.122,2.114l10.492,39.805c0.279,1.167,1.306,1.987,2.503,1.987c1.196,0,2.223-0.82,2.502-1.987 l10.501-39.805c0.224-1.048,1.07-1.894,2.114-2.114l39.809-10.551c1.167-0.228,1.991-1.26,1.991-2.46 C270.711,257.018,269.887,255.979,268.72,255.75z"></path> <path class="st0" d="M109.731,130.72l33.756-8.945c0.989-0.195,1.686-1.065,1.686-2.088c0-1.006-0.698-1.894-1.686-2.088 l-33.756-8.945c-0.883-0.195-1.602-0.905-1.792-1.792l-8.903-33.752c-0.236-0.981-1.107-1.682-2.122-1.682 c-1.014,0-1.886,0.701-2.122,1.682l-8.895,33.752c-0.203,0.888-0.917,1.598-1.801,1.792l-33.756,8.945 c-0.99,0.194-1.686,1.082-1.686,2.088c0,1.024,0.697,1.894,1.686,2.088l33.756,8.945c0.884,0.186,1.598,0.905,1.801,1.792 l8.895,33.752c0.236,0.989,1.108,1.682,2.122,1.682c1.015,0,1.886-0.694,2.122-1.682l8.903-33.752 C108.129,131.625,108.848,130.906,109.731,130.72z">
+
+            </path> </g> </g></svg>
+            <h2 class="iii">Teeth Whitening</h2>
+        <p class="aa">Distinctively re-engineer revolutionary meta-services and premium architectures.</p>
+        </div>
+       </div>
+  
+   </div>
+
+        <div class="second-image"> 
+            
+               <div class="main-section">
+                
+            <div class="content">
+                <div class="header-content">
+                    <p class="header-paraghraph">DentiCare</p>
+                <h1 class="main-header">Specialized Team</h1>
+                </div>
+                <p class="blue-box">"We are a team of dentists, hygienists and receptionists who work together to ensure that you receive the best treatment that you require at a very time that suits you."</p>
+                <img src="https://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/02/img-signature.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+        <!--footer-->
+<footer class="kilimanjaro_area">
+        <!-- Top Footer Area Start -->
+        <div class="foo_top_header_one section_padding_100_70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+
+                        <div class="kilimanjaro_part">
+                            <h5>About Us</h5>
+                            <p>We value comfort and trust. Our friendly and experienced team is committed to providing you with a pleasant experience in our practice. We invite you to visit us and experience the world-class dental care you deserve.</p>
+                            <p>Your satisfaction and your radiant smile are our greatest concern. Trust Denticare for your overall oral health.</p>
+                        </div>
+
+
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+
+
+                        <div class="kilimanjaro_part m-top-15">
+                            <h5>Important Links</h5>
+                            <ul class="kilimanjaro_links">
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms & Conditions</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>About Licences</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Help & Support</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Careers</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Privacy Policy</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Community & Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part">
+                            <h5>Latest News</h5>
+                            <div class="kilimanjaro_blog_area">
+                                <div class="kilimanjaro_thumb">
+								<img class="img-fluid" src="https://3.bp.blogspot.com/--C1wpaf_S4M/W7V__10nRoI/AAAAAAAAK24/1NSfapuYSIY0f0wzXY9NgoH0FjQLT07YACKgBGAs/s1600/maxresdefault.jpg" alt="">
+
+                                </div>
+                                <a href="#">Your Blog Title Goes Here</a>
+                                <p class="kilimanjaro_date">21 Jan 2018</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
+                            <div class="kilimanjaro_blog_area">
+                                <div class="kilimanjaro_thumb">
+								<img class="img-fluid" src="https://3.bp.blogspot.com/--C1wpaf_S4M/W7V__10nRoI/AAAAAAAAK24/1NSfapuYSIY0f0wzXY9NgoH0FjQLT07YACKgBGAs/s1600/maxresdefault.jpg" alt="">
+                                </div>
+                                <a href="#">Your Blog Title Goes Here</a>
+                                <p class="kilimanjaro_date">21 Jan 2018</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
+                            <div class="kilimanjaro_blog_area">
+                                <div class="kilimanjaro_thumb">
+								<img class="img-fluid" src="https://3.bp.blogspot.com/--C1wpaf_S4M/W7V__10nRoI/AAAAAAAAK24/1NSfapuYSIY0f0wzXY9NgoH0FjQLT07YACKgBGAs/s1600/maxresdefault.jpg" alt="">
+                                </div>
+                                <a href="#">Your Blog Title Goes Here</a>
+                                <p class="kilimanjaro_date">21 Jan 2018</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part m-top-15">
+                            <h5>Social Links</h5>
+                            <ul class="kilimanjaro_social_links">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+                                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part">
+                            <h5>Quick Contact</h5>
+                            <div class="kilimanjaro_single_contact_info">
+                                <h5>Phone:</h5>
+                                <p>+49 160 1111111 <br> +49 100 1111111</p>
+                            </div>
+                            <div class="kilimanjaro_single_contact_info">
+                                <h5>Email:</h5>
+                                <p>eClinicsupport@email.com <br> denticaracompany@email.com</p>
+                            </div>
+                        </div>
+                        <!-- <div class="kilimanjaro_part">
+                            <h5>Latest Works</h5>
+                            <div class="kilimanjaro_works">
+                                <a class="kilimanjaro_works_img" href="img/gallery/1.jpg"><img src="img/gallery/1.jpg" alt=""></a>
+                                <a class="kilimanjaro_works_img" href="img/gallery/4.jpg"><img src="img/gallery/4.jpg" alt=""></a>
+                                <a class="kilimanjaro_works_img" href="img/gallery/5.jpg"><img src="img/gallery/5.jpg" alt=""></a>
+                                <a class="kilimanjaro_works_img" href="img/gallery/7.jpg"><img src="img/gallery/7.jpg" alt=""></a>
+                                <a class="kilimanjaro_works_img" href="img/gallery/10.jpg"><img src="img/gallery/10.jpg" alt=""></a>
+                                <a class="kilimanjaro_works_img" href="img/gallery/11.jpg"><img src="img/gallery/11.jpg" alt=""></a>
+                            </div>
+                        </div> -->
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom Area Start -->
+        <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>© All Rights Reserved by <a href="#">eClinic<i class="fa fa-love"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
