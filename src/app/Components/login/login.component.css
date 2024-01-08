@@ -300,10 +300,6 @@ input{
     position: relative;
     justify-content: center;
     padding-top: 50px;
-    /* transform: translate(-50%,-50%);
-    top:25%;
-    left: 70%;
-    margin-bottom: 100px; */
 }
 
 .main-section {
@@ -704,7 +700,7 @@ p, ul li, ol li {
 .kilimanjaro_links a i {
     padding-right: 10px;
 }
-  /* :: 18.0 Footer Area CSS */
+
 
     .footer_area {
         position: relative;
@@ -750,5 +746,3 @@ p, ul li, ol li {
     padding-bottom: 10px;
 }
 
-
-/* Credit to https://bootsnipp.com/snippets/X2XOv */
